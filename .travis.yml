@@ -6,4 +6,4 @@ before_install:
   - docker build -f Dockerfile.dev -t arodko/docker-react .
 
 script:
-  - docker run arodko/docker-react npm run test -- --coverage
+  - docker run -e CI=true arodko/docker-react npm run test
